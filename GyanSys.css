@@ -1,0 +1,147 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #222;
+}
+.navbar-fixed-top {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    z-index: 1;
+    overflow: hidden;
+    background: #222;
+}
+
+.navbar-fixed-top.cbp-af-header-shrink {
+	padding: 10px 10px;
+    
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+    padding: 10px;
+  }
+  
+  li a {
+    text-decoration:none;
+    margin-top: 0.5em;
+    color: #fff;
+    display: block;
+    background-color: #222;
+  }
+  a:hover {
+    color: #b7d3ff;
+  }
+  .new {
+    position: fixed;
+    color: white;
+    top: 5px;
+    right: 0;
+    height: 1rem;
+    width: 7.5rem;
+    margin-right: -2rem;
+    margin-bottom: 1rem;
+    -ms-transform: rotate(45deg); 
+    transform: rotate(50deg);
+    border: solid #dc7e24;
+    background-color: #dc7e24;
+    text-align: center;
+  }
+  .new:hover {
+    color: #00b5de;
+  }
+  .hero {
+    background-image: url('https://gyansys.com/wp-content/uploads/2022/10/light-streaks.jpeg');
+    background-size: cover;
+    height:400px;
+    width:100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .hero .content {
+    background:#333;
+    height: 300px;
+    width: 500px;
+    text-align: left;
+    padding: 10px 10px;
+  }
+  .circular {
+    vertical-align: middle;
+    width: 200px;
+    height: 200px;
+  }
+  .salesforce {
+    margin-top: -0.5%;
+    background: #222;
+    color: white;
+    padding: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .salesforce img{
+    margin-right: 10%;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform .5s ease-in-out;
+     }
+  .salesforce img:hover{
+    transform: rotateY(360deg);
+  }
+  .gap {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @media (max-width: 800px) {
+    .salesforce {
+      flex-direction: column;
+    }
+  }
+  .sap {
+    background-color: #333;
+    color: white;
+    padding: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row;
+  }
+  .sap img{
+    margin-right: 10%;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform .5s ease-in-out;
+     }
+     .sap img:hover{
+    transform: rotateY(360deg);
+    }
+    @media (max-width: 800px) {
+      .sap {
+        flex-direction: column;
+      }
+    }
+  footer {
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0px;
+    background-color: #222;
+    color: #fff;
+    padding: 5px 0;
+    text-align: center;
+  }
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
