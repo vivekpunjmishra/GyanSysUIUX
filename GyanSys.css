@@ -39,6 +39,9 @@ ul {
   a:hover {
     color: #b7d3ff;
   }
+ li a img {
+    margin-top: -10px;
+  }
   .new {
     position: fixed;
     color: white;
