@@ -2,7 +2,7 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: #222;
-font-family: url('http://font.googleapi.com/css family=Roboto:300,400');	
+  font-family: url("https://fonts.googleapis.com/css2?family=Roboto");
 }
 .navbar-fixed-top {
     position: sticky;
@@ -15,7 +15,7 @@ font-family: url('http://font.googleapi.com/css family=Roboto:300,400');
 
 .navbar-fixed-top.cbp-af-header-shrink {
 	padding: 10px 10px;
-
+    
 }
 ul {
     list-style-type: none;
@@ -23,23 +23,27 @@ ul {
     padding: 5px;
     overflow: hidden;
   }
-
+  
   li {
     float: left;
     padding: 10px;
   }
-
-  li a {
-    text-decoration:none;
+  
+  li button {
+    font-family: Arial;
     margin-top: 0.5em;
     color: #fff;
     display: block;
     background-color: #222;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
   }
-  a:hover {
+  button:hover {
     color: #b7d3ff;
   }
- li a img {
+  li button img {
     margin-top: -10px;
   }
   .new {
@@ -135,11 +139,113 @@ ul {
         flex-direction: column;
       }
     }
+
+  .dialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    background-color: #555;
+    color: whitesmoke;
+    padding: 20px;
+    z-index: 10;
+    width: 500px;
+    max-width: 80%;
+  }
+  .dialog.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .btnClose {
+      background-color: #dc7e24;
+      color: white;
+      height: 0rem;
+      width: 5rem;
+      text-align: center;
+      padding-top: 4px;
+      padding-bottom: 20px;
+      padding-right: 2px;
+      margin-top: 15px;
+  }
+  
+  .btnSubmit {
+      background-color: #00b5de;
+      color: white;
+      height: 0rem;
+      width: 100%;
+      text-align: center;
+      padding-top: 4px;
+      padding-bottom: 20px;
+      padding-right: 2px;
+      margin-top: 15px;
+  }
+  
+  .btnCancel {
+      background-color: #dc7e24;
+      color: white;
+      height: 0rem;
+      width: 100%;
+      text-align: center;
+      padding-top: 4px;
+      padding-bottom: 20px;
+      padding-right: 2px;
+      margin-top: 15px;
+  }
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  /* Style for form input fields */
+  input[type="text"],
+  input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+  }
+  
+  input[type="submit"],
+  input[type="button"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: rgb(75, 72, 72);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  input[type="submit"]:hover,
+  input[type="button"]:hover {
+      background-color: #0069d9;
+  }
+  
+  input[type="submit"]:focus,
+  input[type="button"]:focus {
+      outline: none;
+  }
+  
+  input[type="submit"]:disabled,
+  input[type="button"]:disabled {
+      background-color: rgba(51, 51, 51, 0.8);
+      cursor: not-allowed;
+  }
   footer {
     position: sticky;
     position: -webkit-sticky;
     bottom: 0px;
-    background-color: #222;
+    background-color: #333;
     color: #fff;
     padding: 5px 0;
     text-align: center;
