@@ -11,12 +11,12 @@
 <body>
     <header class="navbar-fixed-top cbp-af-header">
         <ul>
-            <li><a href="#"><img src="https://gyansys.com/images/logos/gyansys-logo-white.png" width="100px" height="25px" alt="gyansys inc."></a></li>
-            <li><a href="/Home/">Home</a></li> 
-            <li><a href="/Page 1/">Page 1</a></li> 
-            <li><a href="/Page 2/">Page 2</a></li> 
-            <li><a href="/Account/">Account</a></li>
-            <li><a href="/Submit Lead/">Submit Lead</a></li>
+            <li><button><img src="https://gyansys.com/images/logos/gyansys-logo-white.png" width="100px" height="28px" alt="gyansys inc."></button></li>
+            <li><button>Home</button></li> 
+            <li><button>Page 1</button></li> 
+            <li><button>Page 2</button></li> 
+            <li><button id="accountBtn">Account</button></li>
+            <li><button id="submitLeadBtn">Submit Lead</button></li>
             <h6 class="new">New!</h6>
 
         </ul>
@@ -47,10 +47,43 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quisquam repellat soluta culpa asperiores enim fugiat ut, recusandae, amet repudiandae vitae doloribus. Ex, voluptas voluptatem possimus officiis nulla voluptatibus sint.</p>
         </div>
     </section>
+    <div id="accountDialog" class="dialog">
+        <h2>Account</h2>
+        <div id="firstName"></div>
+        <div id="lastName"></div>
+        <div id="username"></div>
+        <div id="email"></div>
+        <br>
+        <div id="address"></div>
+        <div id="street_address"></div>
+        <div id="city"></div>
+        <div id="state"></div>
+        <div id="country"></div>
+        <div id="zip_code"></div>
+        <button class="btnClose" id="closeAccountBtn">Close</button>
+    </div>
+
+    <div id="submitLeadDialog" class="dialog">
+        <h2>Submit Lead</h2>
+        <form id="leadForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="leadName">Lead Name:</label>
+            <input type="text" id="leadName" required>
+            <label for="description">Description:</label>
+            <input type="text" id="description"></input>
+            <button type="button" class="btnCancel" id="cancelLeadBtn">Cancel</button>
+            <button type="submit" class="btnSubmit" id="submitLeadBtnForm">Submit</button>
+        </form>
+    </div>
+    <div id="overlay"></div>
     <footer>
         <div class="container">
           <p>&copy; Copyright GyanSys 2023 </p>
         </div>
       </footer>
+      <script defer src="GyanSys.js"></script>
 </body>
 </html>
